@@ -1,26 +1,24 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import Hello from './Hello';
 import './style.css';
-
+import Login from './component/login';
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React'
+      name: 'Log In - App'
     };
   }
 
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
-        <p>
-          Start editing to see some magic happen :)
-        </p>
+        <Login />
       </div>
     );
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<Provider store={makeStore()}>
+<App />
+</Provider>, document.getElementById('root'));
