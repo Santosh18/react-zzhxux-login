@@ -1,7 +1,7 @@
 import axios from 'axios';
-export const login = (data) => {
-  return { type: 'LOGIN', payload: data };
-}
+// export const login = (data) => {
+//   return { type: 'LOGIN', payload: data };
+// }
 
 export const login = (credentials) => async (dispatch, getState) => {
   
