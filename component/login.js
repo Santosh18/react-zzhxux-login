@@ -20,7 +20,7 @@ export default class LoginComponent extends React.Component {
       <div>
         Username<input type="text" value={this.state.username} onChange={this.handleUsernameChange} /> <br/>
         Password<input type="text" value={this.state.password} onChange={this.handlePasswordChange} /><br/>
-        <button onClick={this.login}>ADD</button>
+        <button onClick={this.login}>Login</button>
       </div>
     )
   }

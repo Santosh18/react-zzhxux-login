@@ -8,15 +8,17 @@ export const login = (credentials) => async (dispatch, getState) => {
   console.log(credentials.password);
 
   try {
-    var response = await axios.post(`http://localhost:4200/api/login`,
-    {
+   let params = {
       email: credentials.username,
       password: credentials.password
-    });
-    localStorage.setItem('authToken', response.data.token);
+    }
+    console.log('params ',params);
+    var response = await axios.post(`http://localhost:4200/api/login?email=${params.email}&password=${params.password}`);
+    console.log('res', response);
+    localStorage.setItem('authToken', `Bearer ${response.data.token}`);
     dispatch({type: 'LOGIN', payload: response.data});
   } catch (e){
-    console.log("error occured", e);
+    console.log("Error occured", e);
   }
 
 }
