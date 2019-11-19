@@ -12,7 +12,6 @@ export default class LoginComponent extends React.Component {
     this.setState({password: e.target.value})
   }
   login = async () => {
-    console.log(this.state);
      this.props.login(this.state);
   }
 
@@ -20,7 +19,7 @@ export default class LoginComponent extends React.Component {
     return (
       <div>
         Username<input type="text" value={this.state.username} onChange={this.handleUsernameChange} /> <br/>
-        Password<input type="text" value={this.state.username} onChange={this.handlePasswordChange} /><br/>
+        Password<input type="text" value={this.state.password} onChange={this.handlePasswordChange} /><br/>
         <button onClick={this.login}>ADD</button>
       </div>
     )
