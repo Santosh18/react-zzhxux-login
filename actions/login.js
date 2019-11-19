@@ -9,6 +9,6 @@ export const login = (credentials) => async (dispatch, getState) => {
     email: credentials.username,
     password: credentials.password
   });
-  console.log(response.data);
-  dispatch({type: 'LOGIN', payload: data});
+  console.log(response);
+  dispatch({type: 'LOGIN', payload: response.data});
 }
