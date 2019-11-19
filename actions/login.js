@@ -4,10 +4,11 @@ import axios from 'axios';
 // }
 
 export const login = (credentials) => async (dispatch, getState) => {
-  
+  console.log(credentials.username);
   var response = await axios.post(`http://localhost:4200/api/login`,{
     email: credentials.username,
     password: credentials.password
   });
+  console.log(response.data);
   dispatch({type: 'LOGIN', payload: data});
 }
