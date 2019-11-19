@@ -18,8 +18,8 @@ export default class LoginComponent extends React.Component {
   render() {
     return (
       <div>
-        Username<input type="text" value={this.state.username} onChange={this.handleUsernameChange} /> <br/>
-        Password<input type="text" value={this.state.password} onChange={this.handlePasswordChange} /><br/>
+        Username : <input type="text" value={this.state.username} onChange={this.handleUsernameChange} /> <br/><br/>
+        Password : <input type="text" value={this.state.password} onChange={this.handlePasswordChange} /><br/><br/>
         <button onClick={this.login}>Login</button>
       </div>
     )
