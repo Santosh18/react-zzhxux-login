@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { login } from '../actions/login';
 
 export default class LoginComponent extends React.Component {
   state = { username: '', password: '' };
@@ -11,7 +12,8 @@ export default class LoginComponent extends React.Component {
     this.setState({password: e.target.value})
   }
   login = async () => {
-     this.props.add(this.state);
+    console.log(this.state);
+     this.props.login(this.state);
   }
 
   render() {
